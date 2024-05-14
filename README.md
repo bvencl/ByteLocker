@@ -1,0 +1,1 @@
+Home project for a file/folder locker for Windows. @2024.05.14 21:23
