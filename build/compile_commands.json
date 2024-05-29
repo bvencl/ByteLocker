@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/bvencl/GIT/ByteLocker/build",
+  "command": "/usr/bin/g++ -I/home/bvencl/GIT/ByteLocker/include -g -std=gnu++17 -Wall -Wextra -pedantic -g -fdiagnostics-color=always -o CMakeFiles/ByteLocker.dir/src/main.cpp.o -c /home/bvencl/GIT/ByteLocker/src/main.cpp",
+  "file": "/home/bvencl/GIT/ByteLocker/src/main.cpp",
+  "output": "CMakeFiles/ByteLocker.dir/src/main.cpp.o"
+}
+]

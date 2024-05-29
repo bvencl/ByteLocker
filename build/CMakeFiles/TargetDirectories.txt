@@ -1,0 +1,3 @@
+/home/bvencl/GIT/ByteLocker/build/CMakeFiles/ByteLocker.dir
+/home/bvencl/GIT/ByteLocker/build/CMakeFiles/edit_cache.dir
+/home/bvencl/GIT/ByteLocker/build/CMakeFiles/rebuild_cache.dir

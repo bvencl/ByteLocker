@@ -8,20 +8,20 @@ ByteLocker is a C++ project aimed at creating a custom file encryption tool, ins
 
 - **File Encryption**: Encrypt files using strong encryption algorithms (e.g., AES).
 - **File Decryption**: Decrypt files using the same password used for encryption.
-- **Cross-Platform Compatibility**: Designed to work on both Windows and Ubuntu systems.
+- **Cross-Platform Compatibility**: Designed to work on both Windows and Ubuntu systems. Supporting both Bash and PowerShell.
 - **User-Friendly Interface**: Simple command-line interface for ease of use. (Or maybe a GUI later)
 
 ## Used packages
 
-### Openssl
+### OpenSSL
 
-Windows:
+**Windows:**
 
 If you have chocolatey installed you can install openssl via a single command i.e.
 
     choco install openssl
 
-OR: (please dont... just use a package manager)
+OR: (please don't... just use a package manager)
 
 If your friend doesn't have a package manager, they can manually download and install the OpenSSL library. Here are the steps to do so:
 
@@ -34,23 +34,23 @@ If your friend doesn't have a package manager, they can manually download and in
     - Click New and add the path to the OpenSSL library (for example, `C:\OpenSSL-Win64\bin`).
     - Click OK to close the windows.
 
-Ubuntu:
+**Ubuntu:**
 
     sudo apt install libssl-dev
 
 ### CMake version 3.28.3
 
-Windows:
+**Windows:**
 [Official site of CMake](https://cmake.org/download/)
 
-Ubuntu:
+**Ubuntu:**
 
     sudo apt install cmake
 
 ### Ninja version 1.11.1
 
-Windows: [Ninja GitHub](https://github.com/ninja-build/ninja)
+**Windows:** [Ninja GitHub](https://github.com/ninja-build/ninja)
 
-Ubuntu:
+**Ubuntu:**
 
     sudo apt install ninja-build
