@@ -52,3 +52,5 @@ OR: (please don't... just use a package manager)
 **Ubuntu:**
 
     sudo apt install ninja-build
+
+<span style="font-size: smaller;">Totally not an ai-generated readme...</span>
