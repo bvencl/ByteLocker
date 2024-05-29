@@ -1,17 +1,17 @@
-# ByteLocker
+# ByteLocker - under development, project started on 2024.05.29
 
 <!-- Home project for a file/folder locker for Windows. @2024.05.14 21:23 -->
 
-ByteLocker is a C++ project aimed at creating a custom file encryption tool, inspired by BitLocker. The primary goal of ByteLocker is to provide secure file encryption and decryption using a user-defined password. This tool is designed to be cross-platform, working on both Windows and Ubuntu systems.
+ByteLocker is a C++ project aimed at creating a custom file encryption tool, inspired by BitLocker. The primary goal of ByteLocker is to provide secure file encryption and decryption using a user-defined password. This tool is designed to be cross-platform, working on both Windows and Linux/Ubuntu systems.
 
-## Features
+## Features when project finishes
 
 - **File Encryption**: Encrypt files using strong encryption algorithms (e.g., AES).
 - **File Decryption**: Decrypt files using the same password used for encryption.
 - **Cross-Platform Compatibility**: Designed to work on both Windows and Ubuntu systems. Supporting both Bash and PowerShell.
 - **User-Friendly Interface**: Simple command-line interface for ease of use. (Or maybe a GUI later)
 
-## Used packages
+## Used packages / Toolchains for developing
 
 ### OpenSSL
 
@@ -53,4 +53,4 @@ OR: (please don't... just use a package manager)
 
     sudo apt install ninja-build
 
-<span style="font-size: smaller;">Totally not an ai-generated readme...</span>
+Totally not an ai-generated readme...
