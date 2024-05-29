@@ -1,19 +1,19 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.10) # veri veri importánté
 
 # Projekt neve és verziója
 project(ByteLocker VERSION 1.0)
 
 # C++ szabvány beállítása
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Forrásfájlok megadása
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-# Kompilációs opciók hozzáadása
+# Compiler kapcsolók, lehet a -Wextra túlzás, ha zavar akkor kivesszük
 add_compile_options(-Wall -Wextra -pedantic -g -fdiagnostics-color=always)
 
-# Platformspecifikus beállítások
+# Platformspecifikus beállítások, remélem eltaláltam mindent, javítsd ha érint és nem tetszik valami
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     message(STATUS "Configuring for Linux")
     set(CMAKE_CXX_COMPILER "/usr/bin/g++")
@@ -26,13 +26,13 @@ elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
     endif()
 endif()
 
-# OpenSSL könyvtár megtalálása
+# OpenSSL könyvtár, ha van jobb ötlet várom :)
 find_package(OpenSSL REQUIRED)
 
-# SFML könyvtár megtalálása
+# SFML könyvtár... Nem biztos hogy ezt az állatságot csinálnám, de egyelőre nincsen jobb ötletem
 # find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
-# Végrehajtható fájl létrehozása
+#Exectuable létrehozása
 add_executable(ByteLocker
     src/main.cpp
     
