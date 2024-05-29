@@ -23,8 +23,6 @@ If you have chocolatey installed you can install openssl via a single command i.
 
 OR: (please don't... just use a package manager)
 
-If your friend doesn't have a package manager, they can manually download and install the OpenSSL library. Here are the steps to do so:
-
 1. Download the OpenSSL for Windows installer from the following website: <https://slproweb.com/products/Win32OpenSSL.html>
 2. Open the downloaded installer and follow the installation instructions.
 3. After the installation is complete, add the OpenSSL library to the PATH environment variable. This can be done as follows:
