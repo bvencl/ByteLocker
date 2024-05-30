@@ -13,8 +13,23 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ],
             "detail": "Build task for Linux"
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--target",
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": []
         },
         {
             "label": "Build for Windows",
@@ -30,21 +45,10 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": ["$msCompile"],
-            "detail": "Build task for Windows"
-        },
-        {
-            "label": "Clean Build",
-            "type": "shell",
-            "command": "cmake",
-            "args": [
-                "--build",
-                "${workspaceFolder}/build",
-                "--target",
-                "clean"
+            "problemMatcher": [
+                "$msCompile"
             ],
-            "group": "build",
-            "problemMatcher": []
+            "detail": "Build task for Windows"
         }
     ]
 }

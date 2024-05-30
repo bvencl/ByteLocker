@@ -1,4 +1,18 @@
 # ninja log v5
-1	3	0	clean	a31eedcededa8236
-2	428	1716995764569596688	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
-428	484	1716995764624595003	ByteLocker	31b4237deb32e7e7
+1	7	0	clean	a31eedcededa8236
+2	705	1717089848436326394	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
+519	573	1717084396244010996	ByteLocker	31b4237deb32e7e7
+1	409	1717090130942171496	CMakeFiles/ByteLocker.dir/src/decryption.cpp.o	a6115ed39b5a92a0
+1	419	1717090130952171349	CMakeFiles/ByteLocker.dir/src/encryption.cpp.o	6afff084358915cd
+1	748	1717090131281166512	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
+2	397	1717090254199359205	CMakeFiles/ByteLocker.dir/src/decryption.cpp.o	a6115ed39b5a92a0
+9	412	1717090338444120639	CMakeFiles/ByteLocker.dir/src/decryption.cpp.o	a6115ed39b5a92a0
+5	460	1717090338492119933	CMakeFiles/ByteLocker.dir/src/encryption.cpp.o	6afff084358915cd
+1	697	1717090338728116463	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
+697	758	1717090338788115581	ByteLocker	55d607d7927b059
+1	684	1717090419021936070	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
+684	745	1717090419082935174	ByteLocker	55d607d7927b059
+1	662	1717090438590648393	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
+662	722	1717090438650647511	ByteLocker	55d607d7927b059
+2	691	1717090447234521323	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
+691	751	1717090447294520441	ByteLocker	55d607d7927b059

@@ -56,6 +56,20 @@ build CMakeFiles/ByteLocker.dir/src/main.cpp.o: CXX_COMPILER__ByteLocker_unscann
   OBJECT_DIR = CMakeFiles/ByteLocker.dir
   OBJECT_FILE_DIR = CMakeFiles/ByteLocker.dir/src
 
+build CMakeFiles/ByteLocker.dir/src/encryption.cpp.o: CXX_COMPILER__ByteLocker_unscanned_Debug /home/bvencl/GIT/ByteLocker/src/encryption.cpp || cmake_object_order_depends_target_ByteLocker
+  DEP_FILE = CMakeFiles/ByteLocker.dir/src/encryption.cpp.o.d
+  FLAGS = -g -std=gnu++17 -Wall -Wextra -pedantic -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bvencl/GIT/ByteLocker/include
+  OBJECT_DIR = CMakeFiles/ByteLocker.dir
+  OBJECT_FILE_DIR = CMakeFiles/ByteLocker.dir/src
+
+build CMakeFiles/ByteLocker.dir/src/decryption.cpp.o: CXX_COMPILER__ByteLocker_unscanned_Debug /home/bvencl/GIT/ByteLocker/src/decryption.cpp || cmake_object_order_depends_target_ByteLocker
+  DEP_FILE = CMakeFiles/ByteLocker.dir/src/decryption.cpp.o.d
+  FLAGS = -g -std=gnu++17 -Wall -Wextra -pedantic -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bvencl/GIT/ByteLocker/include
+  OBJECT_DIR = CMakeFiles/ByteLocker.dir
+  OBJECT_FILE_DIR = CMakeFiles/ByteLocker.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ByteLocker
@@ -64,7 +78,7 @@ build CMakeFiles/ByteLocker.dir/src/main.cpp.o: CXX_COMPILER__ByteLocker_unscann
 #############################################
 # Link the executable ByteLocker
 
-build ByteLocker: CXX_EXECUTABLE_LINKER__ByteLocker_Debug CMakeFiles/ByteLocker.dir/src/main.cpp.o
+build ByteLocker: CXX_EXECUTABLE_LINKER__ByteLocker_Debug CMakeFiles/ByteLocker.dir/src/main.cpp.o CMakeFiles/ByteLocker.dir/src/encryption.cpp.o CMakeFiles/ByteLocker.dir/src/decryption.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/ByteLocker.dir
   POST_BUILD = :

@@ -1,20 +1,19 @@
-#include "example.hpp"
+#include "argumenthandler.hpp"
 
-#include <iostream>
-#include <fstream>
-#include <ostream>
-
-#include <vector>
-
-#include <openssl/rsa.h>
-#include <openssl/pem.h>
-
-int main
-(
-    // int argc, char* argv[]
-)
+// "Usage: bytelocker [options] [filepath]"
+int main(int argc, char *argv[])
 {
-    examplefunctionsayHello();
+    try
+    {
+        manageArguments(argc, argv);
+    }
+    catch (std::runtime_error &rtr)
+    {
+        std::cout << rtr.what()
+                  << std::endl
+                  << std::endl;
+    }
+    // std::vector<unsigned char> contents = readFileAsBinary(filePath);
 
     return 0;
 }
