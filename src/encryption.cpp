@@ -1,6 +1,6 @@
 #include "encryption.hpp"
 
-void encryption(std::string filePath)
+void encryption(const std::string& filePath)
 {
     std::vector<unsigned char> contents = readFileAsBinary(filePath);
 
@@ -10,5 +10,6 @@ void encryption(std::string filePath)
             std::cout << std::hex << c;
         }
         std::cout << '\n';
+        
     }
 }

@@ -10,10 +10,9 @@ int main(int argc, char *argv[])
     catch (std::runtime_error &rtr)
     {
         std::cout << rtr.what()
-                  << std::endl
+                  << "\n"
                   << std::endl;
     }
-    // std::vector<unsigned char> contents = readFileAsBinary(filePath);
 
     return 0;
 }

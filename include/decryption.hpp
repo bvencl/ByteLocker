@@ -1,4 +1,4 @@
 #pragma once
 #include "readfile.hpp"
 
-void decryption(std::string);
+void decryption(const std::string&);

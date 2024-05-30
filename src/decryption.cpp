@@ -1,5 +1,5 @@
 #include "decryption.hpp"
 
-void decryption(std::string filePath)
+void decryption(const std::string &filePath)
 {
 }
