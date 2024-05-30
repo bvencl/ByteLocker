@@ -1,9 +1,0 @@
-# ninja log v5
-1	7	0	clean	a31eedcededa8236
-1	691	1717091729580655201	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
-691	751	1717091729639654356	ByteLocker	55d607d7927b059
-2	374	1717091729263659742	CMakeFiles/ByteLocker.dir/src/decryption.cpp.o	a6115ed39b5a92a0
-1	437	1717091729326658840	CMakeFiles/ByteLocker.dir/src/encryption.cpp.o	6afff084358915cd
-2	407	1717092288771607700	CMakeFiles/ByteLocker.dir/src/encryption.cpp.o	6afff084358915cd
-2	678	1717092289042603788	CMakeFiles/ByteLocker.dir/src/main.cpp.o	4c697cc94205057
-679	739	1717092289103602908	ByteLocker	55d607d7927b059
