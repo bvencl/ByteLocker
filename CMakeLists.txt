@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.10) # veri veri importánté
 
 # Projekt neve és verziója
 project(ByteLocker VERSION 1.0)
-
-# C++ szabvány beállítása
 set(CMAKE_CXX_STANDARD 17)
 # set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -11,13 +9,18 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # Compiler kapcsolók, lehet a -Wextra túlzás, ha zavar akkor kivesszük
-add_compile_options(-Wall -Wextra -pedantic -g -fdiagnostics-color=always)
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    add_compile_options(-Wall -Wextra -pedantic -g -fdiagnostics-color=always)
+elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    add_compile_options(/W4 /EHsc)
+endif()
 
 # Platformspecifikus beállítások, remélem eltaláltam mindent, javítsd ha érint és nem tetszik valami
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     message(STATUS "Configuring for Linux")
     set(CMAKE_CXX_COMPILER "/usr/bin/g++")
     set(CMAKE_C_COMPILER "/usr/bin/gcc")
+    set(CMAKE_GENERATOR "Ninja")
 elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
     message(STATUS "Configuring for Windows")
     set(CMAKE_GENERATOR "Visual Studio 16 2019") # Remélem jó, ha valakinek nem tetszik javítsa ki, én úgysem ezt használom

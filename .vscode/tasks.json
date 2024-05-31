@@ -37,7 +37,7 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "${workspaceFolder}/build",
+                "${workspaceFolder}\build",
                 "--config",
                 "Debug"
             ],

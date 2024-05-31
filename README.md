@@ -6,7 +6,7 @@ ByteLocker is a C++ project aimed at creating a custom file encryption tool, ins
 
 ## Features when project finishes
 
-- **File Encryption**: Encrypt files using strong encryption algorithms (e.g., AES).
+- **File Encryption**: Encrypt files using strong encryption algorithms (e.g., AES, RSA...).
 - **File Decryption**: Decrypt files using the same password used for encryption.
 - **Cross-Platform Compatibility**: Designed to work on both Windows and Ubuntu systems. Supporting both Bash and PowerShell.
 - **User-Friendly Interface**: Simple command-line interface for ease of use. (Or maybe a GUI later)

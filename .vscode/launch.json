@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/ByteLocker",
-            "args": ["-encrypt","${workspaceFolder}/tests/test1.txt"],
+            "args": ["-encrypt","${workspaceFolder}/tests/fiz.pdf"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

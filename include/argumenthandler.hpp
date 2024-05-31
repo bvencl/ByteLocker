@@ -13,8 +13,9 @@ inline void printHelp()
 
     cout << "\nByteLocker version Alpha \n"
          << "Usage: bytelocker [options] [filepath]\n\n"
-         << "\t --help \t Display this information.\n"
-
+         << "\t --help \tDisplay this information.\n"
+         << "\t -encrypt \tencrypt a file with ______ encryption algorythm.\n"
+         << "\t -decrypt \tdecrypt a file with ______ encryption algorythm.\n"
          << endl;
 }
 
