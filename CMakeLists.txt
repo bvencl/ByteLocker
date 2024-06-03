@@ -40,6 +40,7 @@ add_executable(ByteLocker
     src/main.cpp
     src/encryption.cpp
     src/decryption.cpp
+    src/rijndael.cpp
     )
 
 # Könyvtárak linkelése

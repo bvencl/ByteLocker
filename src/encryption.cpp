@@ -1,6 +1,7 @@
 #include "encryption.hpp"
 #include <termios.h>
 #include <unistd.h>
+#include <iomanip>
 
 std::string getPassword()
 {
@@ -45,11 +46,21 @@ void encryption(const std::string &filePath)
     for (unsigned char c : contents)
     {
         // std::cout << c;
-        std::cout << std::hex << static_cast<int>(c);
+        std::cout << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << static_cast<int>(c) << ' ';
     }
     std::cout << '\n';
     std::cout << '\n';
     std::cout << std::dec << contents.size() << '\n';
 
+    std::fstream file("hihi_kimasoltam_a_fiz_pdfet.pdf", std::ios::out | std::ios::binary);
+    if (!file.is_open())
+    {
+        throw std::runtime_error("Couldnt open the new file!");
+        return;
+    }
 
+    file.write(reinterpret_cast<const char *>(contents.data()), contents.size());
+    file.close();
+
+    // Fasza, most már tudok binárisan másolni xd
 }
