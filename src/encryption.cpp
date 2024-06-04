@@ -1,27 +1,27 @@
 #include "encryption.hpp"
-#include <termios.h>
-#include <unistd.h>
+// #include <termios.h>
+// #include <unistd.h>
 #include <iomanip>
 
-std::string getPassword()
-{
-    std::cout << "Please give my a password to encrypt with! \n\tMy super storng password:" << std::endl;
+// std::string getPassword()
+// {
+//     std::cout << "Please give my a password to encrypt with! \n\tMy super storng password:" << std::endl;
 
-    termios old, neww;             // struktúra, ami a terminál beállytásait tárolja
-    tcgetattr(STDIN_FILENO, &old); // lekérjük a terminál attribútumait
-    neww = old;                    // az újat a régivel inicializájuk
+//     termios old, neww;             // struktúra, ami a terminál beállytásait tárolja
+//     tcgetattr(STDIN_FILENO, &old); // lekérjük a terminál attribútumait
+//     neww = old;                    // az újat a régivel inicializájuk
 
-    neww.c_lflag &= ~ECHO;                   // ECHO kikapcsolása, hogy ne jelenjen meg a jelszó a képernyőn (Logikai ÉS művelettel bitenként allítjuk a flageket)
-    tcsetattr(STDIN_FILENO, TCSANOW, &neww); // Beállítjuk az új flageket
+//     neww.c_lflag &= ~ECHO;                   // ECHO kikapcsolása, hogy ne jelenjen meg a jelszó a képernyőn (Logikai ÉS művelettel bitenként allítjuk a flageket)
+//     tcsetattr(STDIN_FILENO, TCSANOW, &neww); // Beállítjuk az új flageket
 
-    std::string password;
-    std::getline(std::cin, password); // bekérjük a jelszót, immár úgy, hogy a karakterek nem jelennek meg a képernyőn
+//     std::string password;
+//     std::getline(std::cin, password); // bekérjük a jelszót, immár úgy, hogy a karakterek nem jelennek meg a képernyőn
 
-    tcsetattr(STDIN_FILENO, TCSANOW, &old); // visszaállítjuk a terminál régi beállításait
+//     tcsetattr(STDIN_FILENO, TCSANOW, &old); // visszaállítjuk a terminál régi beállításait
 
-    std::cout << std::endl;
-    return password;
-}
+//     std::cout << std::endl;
+//     return password;
+// }
 
 void encryption(const std::string &filePath)
 {
@@ -37,7 +37,7 @@ void encryption(const std::string &filePath)
         return;
     }
 
-    std::string password = getPassword();
+    // std::string password = getPassword();
     // std::cout << password << "\n\n" << std::endl;
 
     // Akkor itt most be van olvasva a file, és van egy jelszó. A jelszó alapján kell egy kulcsot generálni, majd aszerint egy új fájlba lekódolni az eredetiből beolvasott "szöveget"

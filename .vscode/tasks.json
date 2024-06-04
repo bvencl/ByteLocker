@@ -13,9 +13,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "detail": "Build task for Linux"
         },
         {
@@ -37,7 +35,7 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "${workspaceFolder}\build",
+                "${workspaceFolder}/build",
                 "--config",
                 "Debug"
             ],
@@ -45,9 +43,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$msCompile"
-            ],
+            "problemMatcher": ["$msCompile"],
             "detail": "Build task for Windows"
         }
     ]
