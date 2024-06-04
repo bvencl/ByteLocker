@@ -30,7 +30,7 @@ elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
 endif()
 
 # OpenSSL könyvtár, ha van jobb ötlet várom :)
-find_package(OpenSSL REQUIRED)
+# find_package(OpenSSL REQUIRED)
 
 # SFML könyvtár... Nem biztos hogy ezt az állatságot csinálnám, de egyelőre nincsen jobb ötletem
 # find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
