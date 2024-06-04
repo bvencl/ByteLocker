@@ -37,7 +37,7 @@ endif()
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # Végrehajtható fájl létrehozása
-add_executable(ByteLocker
+add_executable(bytelocker
     src/main.cpp
     src/encryption.cpp
     src/decryption.cpp

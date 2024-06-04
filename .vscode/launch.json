@@ -5,8 +5,11 @@
             "name": "ByteLocker Debug Linux",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/ByteLocker",
-            "args": [],
+            "program": "${workspaceFolder}/build/bytelocker",
+            "args": [
+                "-encrypt",
+                "tests/test1.txt"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -35,8 +38,11 @@
             "name": "ByteLocker Debug Windows",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/ByteLocker.exe",
-            "args": ["-encrypt", "tests/test1.txt"],
+            "program": "${workspaceFolder}/build/bytelocker.exe",
+            "args": [
+                "-encrypt",
+                "tests/test1.txt"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

@@ -1,27 +1,51 @@
 #include "encryption.hpp"
-// #include <termios.h>
-// #include <unistd.h>
 #include <iomanip>
+// #include <termios.h> // TODO Csak linux alatt múködő cuccok valamit kell ehylette találni...
+// #include <unistd.h>  // TODO ... LÁSD ALÁBB
 
-// std::string getPassword()
-// {
-//     std::cout << "Please give my a password to encrypt with! \n\tMy super storng password:" << std::endl;
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <termios.h>
+#include <unistd.h>
+#endif
 
-//     termios old, neww;             // struktúra, ami a terminál beállytásait tárolja
-//     tcgetattr(STDIN_FILENO, &old); // lekérjük a terminál attribútumait
-//     neww = old;                    // az újat a régivel inicializájuk
+std::string getPassword()
+{
+    std::cout << "Please give my a password to encrypt with! \nMy super storng password:" << std::endl;
 
-//     neww.c_lflag &= ~ECHO;                   // ECHO kikapcsolása, hogy ne jelenjen meg a jelszó a képernyőn (Logikai ÉS művelettel bitenként allítjuk a flageket)
-//     tcsetattr(STDIN_FILENO, TCSANOW, &neww); // Beállítjuk az új flageket
+#ifdef _WIN32
 
-//     std::string password;
-//     std::getline(std::cin, password); // bekérjük a jelszót, immár úgy, hogy a karakterek nem jelennek meg a képernyőn
+    // Windows megoldás
 
-//     tcsetattr(STDIN_FILENO, TCSANOW, &old); // visszaállítjuk a terminál régi beállításait
+#else
 
-//     std::cout << std::endl;
-//     return password;
-// }
+    termios old, neww;             // struktúra, ami a terminál beállytásait tárolja
+    tcgetattr(STDIN_FILENO, &old); // lekérjük a terminál attribútumait
+    neww = old;                    // az újat a régivel inicializájuk
+
+    neww.c_lflag &= ~ECHO;                   // ECHO kikapcsolása, hogy ne jelenjen meg a jelszó a képernyőn (Logikai ÉS művelettel bitenként allítjuk a flageket)
+    tcsetattr(STDIN_FILENO, TCSANOW, &neww); // Beállítjuk az új flageket
+
+#endif //! közös rész:
+
+    std::string password;
+    std::getline(std::cin, password); // bekérjük a jelszót, immár úgy, hogy a karakterek nem jelennek meg a képernyőn
+
+#ifdef _WIN32
+
+    // Windows megoldás, most maradjon ennyi:
+    password = "hihi";
+
+#else
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &old); // visszaállítjuk a terminál régi beállításait
+
+#endif //! közös rész:
+
+    std::cout << std::endl;
+    return password;
+}
 
 void encryption(const std::string &filePath)
 {
@@ -37,12 +61,10 @@ void encryption(const std::string &filePath)
         return;
     }
 
-    // std::string password = getPassword();
-    // std::cout << password << "\n\n" << std::endl;
+    //! Most be van olvasva a file, és van egy jelszó. A jelszó alapján kell egy kulcsot generálni, majd aszerint egy új fájlba lekódolni az eredetiből beolvasott "szöveget"
+    //! Ezek után ki kell törölni az eredeti fájlt.
 
-    // Akkor itt most be van olvasva a file, és van egy jelszó. A jelszó alapján kell egy kulcsot generálni, majd aszerint egy új fájlba lekódolni az eredetiből beolvasott "szöveget"
-    // Ezek után ki kell törölni az eredeti fájlt.
-
+    // {
     for (unsigned char c : contents)
     {
         // std::cout << c;
@@ -52,15 +74,19 @@ void encryption(const std::string &filePath)
     std::cout << '\n';
     std::cout << std::dec << contents.size() << '\n';
 
+    std::string password = getPassword();
+    std::cout << password << "\n\n"
+              << std::endl;
+
     std::fstream file("hihi_kimasoltam_a_fiz_pdfet.pdf", std::ios::out | std::ios::binary);
     if (!file.is_open())
     {
         throw std::runtime_error("Couldnt open the new file!");
         return;
     }
-
     file.write(reinterpret_cast<const char *>(contents.data()), contents.size());
     file.close();
+    // }
 
     // Fasza, most már tudok binárisan másolni xd
 }
