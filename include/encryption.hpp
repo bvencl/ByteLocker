@@ -1,4 +1,6 @@
 #pragma once
 #include "readfile.hpp"
 
-void encryption(const std::string&);
+std::string getPassword();
+
+void encryption(const std::string &);

@@ -14,7 +14,7 @@ elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
     if (MSVC)
         add_compile_options(/W4 /EHsc)
     else()
-        add_compile_options(-Wall -Wextra -pedantic -g)
+        add_compile_options(-Wall -Wextra -pedantic -g -fdiagnostics-color=always)
     endif()
 endif()
 
