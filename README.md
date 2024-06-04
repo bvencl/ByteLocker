@@ -13,7 +13,7 @@ ByteLocker is a C++ project aimed at creating a custom file encryption tool, ins
 
 ## Used packages / Toolchains for developing
 
-### OpenSSL
+<!-- ### OpenSSL
 
 **Windows:**
 
@@ -34,7 +34,7 @@ OR: (please don't... just use a package manager)
 
 **Ubuntu:**
 
-    sudo apt install libssl-dev
+    sudo apt install libssl-dev -->
 
 ### CMake version 3.28.3
 
@@ -52,5 +52,3 @@ OR: (please don't... just use a package manager)
 **Ubuntu:**
 
     sudo apt install ninja-build
-
-Totally not an ai-generated readme...
