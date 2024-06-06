@@ -14,8 +14,11 @@ public:
     ~Rijndael() = default;
 
     void generateKeyFromPassword(const std::string &password);
+    void generateRoundKeys();
     void generateSaltFromPassword(const std::string &password);
 
 private:
     std::string password;
+    std::string key;
+    std::string salt;
 };

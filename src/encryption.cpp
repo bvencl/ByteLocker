@@ -82,8 +82,8 @@ void encryption(const std::string &filePath)
         // std::cout << '\n';
         // std::cout << std::dec << contents.size() << '\n';
 
-        // // std::cout << password << "\n\n"
-        // //           << std::endl;
+        // std::cout << password << "\n\n"
+        //           << std::endl;
 
         // std::fstream file("generatedtest.txt", std::ios::out | std::ios::binary);
         // if (!file.is_open())
