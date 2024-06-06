@@ -47,7 +47,7 @@ OR: (please don't... just use a package manager)
 
 ### Ninja version 1.11.1
 
-**Windows:** [Ninja GitHub](https://github.com/ninja-build/ninja)
+**Windows:** [Ninja GitHub](https://github.com/ninja-build/ninja) (Or you could just use Visual Studio's)
 
 **Ubuntu:**
 

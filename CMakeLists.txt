@@ -42,4 +42,5 @@ add_executable(bytelocker
     src/encryption.cpp
     src/decryption.cpp
     src/rijndael.cpp
+    src/read.cpp
 )

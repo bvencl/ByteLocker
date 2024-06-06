@@ -5,6 +5,8 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <iomanip>
+
 
 inline std::vector<unsigned char> readFileAsBinary(const std::string &filePath)
 {
@@ -21,3 +23,5 @@ inline std::vector<unsigned char> readFileAsBinary(const std::string &filePath)
 
     return readBuffer;
 }
+
+std::string getPassword();
