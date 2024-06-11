@@ -21,8 +21,8 @@ void encryption(const std::string &filePath)
     {
         for (unsigned char c : contents)
         {
-            // std::cout << c;
-            std::cout << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << static_cast<int>(c) << ' ';
+             std::cout << c;
+            //std::cout << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << static_cast<int>(c) << ' ';
         }
         std::cout << '\n';
         std::cout << '\n';
