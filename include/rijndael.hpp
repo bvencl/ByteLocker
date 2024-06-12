@@ -12,22 +12,28 @@ template <unsigned NUM = 256>
 class Rijndael
 {
 public:
-    Rijndael(std::string passwordp) : password(passwordp){};
+    Rijndael(std::string passwordp) : password(passwordp), bitcount(NUM){};
     ~Rijndael() = default;
 
-    void generateKeyFromPassword(const std::string &password);
+    void generateKeyFromPassword();
     void generateKey();
     void generateRoundKeys();
-    void generateSaltFromPassword(const std::string &password);
+    void generateSaltFromPassword();
 
 private:
     std::string password;
     std::string key;
     std::string salt;
+    unsigned bitcount;
 };
 
 /*
-Először 
+Először a kulcsot kell legenerálni a jelszóból
+Ebből a kulcsból további kulcsokat generálni a többi "körhöz"
+Elvégezni a köröket
+Új fájlba beírni a ciphertextet
+
+Salt? IV?
 
 
 

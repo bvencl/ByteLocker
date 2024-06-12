@@ -17,6 +17,7 @@ void encryption(const std::string &filePath)
 
     //! Most be van olvasva a file, és van egy jelszó. A jelszó alapján kell egy kulcsot generálni, majd aszerint egy új fájlba lekódolni az eredetiből beolvasott "szöveget"
     //! Ezek után ki kell törölni az eredeti fájlt.
+    // de nem itt :)
 
     {
         for (unsigned char c : contents)
