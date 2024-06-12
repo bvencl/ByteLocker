@@ -15,16 +15,24 @@ void encryption(const std::string &filePath)
         return;
     }
 
-    //! Most be van olvasva a file, és van egy jelszó. A jelszó alapján kell egy kulcsot generálni, majd aszerint egy új fájlba lekódolni az eredetiből beolvasott "szöveget"
-    //! Ezek után ki kell törölni az eredeti fájlt.
-    // de nem itt :)
+    Rijndael instance(password);
 
     {
+        unsigned char *q = contents.data() + contents.size() - 1;
+        unsigned char *p = contents.data();
+
+        while (p != q)
+        {
+            *p ^= instance.shortkey;
+            p++;
+        }
+
         for (unsigned char c : contents)
         {
-             std::cout << c;
-            //std::cout << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << static_cast<int>(c) << ' ';
+            // std::cout << c;
+            std::cout << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << static_cast<int>(c) << ' ';
         }
+
         std::cout << '\n';
         std::cout << '\n';
         std::cout << std::dec << contents.size() << '\n';

@@ -7,24 +7,26 @@
 
 #include "read.hpp"
 
-// Can be 256, 192 and 128, default is 256
-template <unsigned NUM = 256>
 class Rijndael
 {
 public:
-    Rijndael(std::string passwordp) : password(passwordp), bitcount(NUM){};
+    Rijndael(std::string passwordp) : password(passwordp)
+    {
+        generateKeyFromPassword(passwordp);
+    };
     ~Rijndael() = default;
 
-    void generateKeyFromPassword();
-    void generateKey();
-    void generateRoundKeys();
-    void generateSaltFromPassword();
+    void generateKeyFromPassword(std::string passwordp);
+    // void generateKey();
+    // void generateRoundKeys();
+    // void generateSaltFromPassword();
+
+    unsigned char shortkey;
 
 private:
     std::string password;
     std::string key;
     std::string salt;
-    unsigned bitcount;
 };
 
 /*
