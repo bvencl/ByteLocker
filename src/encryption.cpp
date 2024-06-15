@@ -30,15 +30,16 @@ void encryption(const std::string &filePath)
         for (unsigned char c : contents)
         {
             // std::cout << c;
-            std::cout << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << static_cast<int>(c) << ' ';
+            std::cout << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << static_cast<int>(c)
+            //  << ' '
+             ;
         }
 
         std::cout << '\n';
         std::cout << '\n';
         std::cout << std::dec << contents.size() << '\n';
 
-        std::cout << password << "\n\n"
-                  << std::endl;
+        std::cout << password << "\n\n";
 
         std::fstream file("generatedtest.txt", std::ios::out | std::ios::binary);
         if (!file.is_open())

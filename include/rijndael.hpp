@@ -13,7 +13,7 @@ public:
     Rijndael(std::string passwordp) : password(passwordp)
     {
         generateKeyFromPassword(passwordp);
-    };
+    }
     ~Rijndael() = default;
 
     void generateKeyFromPassword(std::string passwordp);
